@@ -1,131 +1,245 @@
 :root {
-  --color-primary: #08A6E4;
-  --color-primary-shadow: rgba(7, 172, 230, .16);
-  --color-redish: #FB3B64;
-  --color-green: #55DFB4;
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-grey: #A5A5A5;
-  --color-light-grey: #F7F7F7;
-  --button-radius: 35px;
-  --font-raleway: "Raleway", sans-serif;
-  --font-open-sans: "Open Sans", sans-serif;
+	--color-primary: #08a6e4;
+	--color-primary-shadow: rgba(7, 172, 230, 0.16);
+	--color-redish: #fb3b64;
+	--color-green: #55dfb4;
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-grey: #a5a5a5;
+	--color-light-grey: #f7f7f7;
+	--button-radius: 35px;
+	--font-raleway: 'Raleway', sans-serif;
+	--font-open-sans: 'Open Sans', sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-open-sans);
+	font-family: var(--font-open-sans);
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 h2 {
-  font-family: var(--font-raleway);
-  font-size: 2.25rem;
+	font-family: var(--font-raleway);
+	font-size: 2.25rem;
 }
 
 /**
  * Helpers
  */
 .container {
-  width: 1352px;
-  margin: 0 auto;
+	width: 1352px;
+	margin: 0 auto;
 }
 
-
 .btn {
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-  padding: 16px 65px;
-  border-radius: var(--button-radius);
-  border: none;
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	padding: 16px 65px;
+	border-radius: var(--button-radius);
+	border: none;
 }
 
 .btn--primary {
-  background-color: var(--color-primary);
-  border-radius: var(--button-radius);
-  box-shadow: 3px 10px 14px var(--color-primary-shadow);
+	background-color: var(--color-primary);
+	border-radius: var(--button-radius);
+	box-shadow: 3px 10px 14px var(--color-primary-shadow);
 }
 
 .btn--redish {
-  background-color: var(--color-redish);
+	background-color: var(--color-redish);
 }
 
 .btn--green {
-  background-color: var(--color-green);
+	background-color: var(--color-green);
 }
 
 .btn--large {
-  padding: 22px 155px;
+	padding: 22px 155px;
 }
 
 .logo {
-  font-family: var(--font-raleway);
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--color-primary);
+	font-family: var(--font-raleway);
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--color-primary);
 }
-
 
 /**
  * Header
  */
 
- header {
-    height: 70px;
-    box-shadow: 0px 3px 6px #00000029;
- }
+header {
+	height: 70px;
+	box-shadow: 0px 3px 6px #00000029;
+}
 
 .header_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; /*dlaczego nadajemy tu wysokość? czy treść jej nie wypełni automatycznie? */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%; /*dlaczego nadajemy tu wysokość? czy treść jej nie wypełni automatycznie? */
 }
 
 .logo {
-    font-family: var(--font-raleway);
-    font-size: 32px;
-    color: var(--color-primary);
-    font-weight: 300px;
+	font-family: var(--font-raleway);
+	font-size: 32px;
+	color: var(--color-primary);
+	font-weight: 300px;
 }
 
 .header-navigation {
-    list-style-type: none; /*ja wyzerowałam listę ul czy to źle, czy to coś daje? */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* justify-content: space-between; dlaczego to nie działa nawet jak ustawie na elementach li display:block?*/
+	list-style-type: none; /*ja wyzerowałam listę ul czy to źle, czy to coś daje? */
+	margin: 0;
+	padding: 0;
+	display: flex;
+	/* justify-content: space-between; dlaczego to nie działa nawet jak ustawie na elementach li display:block?*/
 }
 
 .header-navigation-links {
-    padding: 0 26px;
-    
+	padding: 0 26px;
 }
 
 .nav-link {
-    font-size: 11px;
-    font-family: var(--font-open-sans);
-    font-weight: bold;
-    letter-spacing: 3.28px;
-    color: var(--color-grey);
-    text-align: center;
-    text-transform: uppercase;
-    padding: 28px 18px 22px; /* skąd są te wymiary? nie potrafię ich zlokalizować na adobe xd */
-    
-    
-
+	font-size: 11px;
+	font-family: var(--font-open-sans);
+	font-weight: bold;
+	letter-spacing: 3.28px;
+	color: var(--color-grey);
+	text-align: center;
+	text-transform: uppercase;
+	padding: 28px 18px 22px; /* skąd są te wymiary? nie potrafię ich zlokalizować na adobe xd */
 }
 
 .nav-link:hover {
-    border-bottom: 4px solid var(--color-primary);
-    color: var(--color-black);
+	border-bottom: 4px solid var(--color-primary);
+	color: var(--color-black);
 }
 
+/* Title page*/
 
+.page-title-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-size: 49px;
+	font-family: var(--font-raleway);
+	text-align: center;
+	padding-bottom: 20px;
+	margin-top: 130px;
+}
+
+.subtitle {
+	font-family: var(--font-open-sans);
+	font-size: 16px;
+	padding-bottom: 38px;
+}
+
+.title-button {
+	display: block;
+	width: 440px;
+	height: 67px;
+	background-color: var(--color-primary);
+	box-shadow: 5px 10px 14px #07ace629;
+	border-radius: 40px;
+	text-align: center;
+	line-height: 67px;
+	color: var(--color-light-grey);
+	font-size: 16px;
+	font-family: var(--font-open-sans);
+	font-weight: bold;
+}
+
+.page-image {
+	width: 100%;
+	height: auto; /*dlaczego stosuje tutja height: auto, czy mogę to pominąć?*/
+	margin-bottom: 100px;
+}
+
+/* Statistic */
+
+.statistics {
+	/* dlaczego pod sekcją z statystykami musimy opakować wszystko w kontener? ja na przykład chciałam od razu nadać wymiary na sekcję( jak width i margin 0 auto) ??*/
+}
+.statistics-title {
+	font-family: var(--font-raleway);
+	font-size: 36px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.statistic-container {
+	max-width: 800px;
+	margin: 100px auto 120px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+
+}
+
+.statistic-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 13px;
+	align-items:center;
+	
+
+
+}
+
+.circle {
+	height: 63px;
+	width: 63px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.red {
+	background-color: var(--color-redish);
+}
+
+.blue {
+	background-color: var(--color-primary);
+}
+
+.green {
+	background-color: var(--color-green);
+}
+
+.icon {
+	position: absolute;
+	left: 45%;
+}
+
+.statistic-container > .icon:nth-child(2) {
+	position: absolute;
+	left: 45%;
+	height: 100px;
+	width: 44px;
+}
+
+.statistic-number {
+	font-size: 20px;
+	font-family: var(--font-raleway);
+	font-weight: 800;
+	letter-spacing: 5.96px;
+}
+
+.statistic-paragraph {
+	font-size: 17px;
+	font-family: var(--font-raleway);
+	color: var(--color-grey);
+
+}
